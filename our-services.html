@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Our Services | Nishi Services</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+  .logo {
+  height: 100px !important;  /* force height */
+  width: auto !important;    /* maintain aspect ratio */
+  display: block;            /* avoid inline issues */
+}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <img src="assets/logo.png" alt="Nishi Services Logo" class="logo"/>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="about-proprietor.html">Our Leadership</a></li>
+        <li><a href="our-services.html" class="active">Our Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ <main class="services-container">
+
+  <style>
+    /* ---------------------------------------------
+       Reset / Base Styles
+       --------------------------------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: #f9fafb; /* light gray background */
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* ---------------------------------------------
+       Section + Container
+       --------------------------------------------- */
+    .cards-section {
+      padding: 3rem 1rem; /* 48px top/bottom, 16px left/right */
+    }
+    .cards-container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .cards-title {
+      text-align: center;
+      font-size: 2rem;        /* 32px */
+      font-weight: 700;       /* bold */
+      color: #1e3a8a;         /* “blue‐900” */
+      margin-bottom: 3rem;    /* 48px */
+    }
+
+    /* ---------------------------------------------
+       Responsive Grid for Cards
+       --------------------------------------------- */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr; /* 1 column on mobile */
+      gap: 2rem;                  /* 32px gap between cards */
+    }
+    @media (min-width: 640px) {
+      .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* ---------------------------------------------
+       Each Card
+       --------------------------------------------- */
+    .card {
+      background-color: #ffffff;
+      border-radius: 1rem; /* 16px rounding */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      position: relative; /* for absolute‐positioned icon */
+    }
+
+    /* -------- Top Curved Gradient Section -------- */
+    .card-gradient {
+      position: relative;
+      background: linear-gradient(
+        to bottom,
+        #3b82f6,  /* blue‐500 */
+        #1e40af   /* blue‐800 */
+      );
+      height: 7rem; /* 112px tall */
+      border-bottom-left-radius: 1.5rem;  /* 24px curve */
+      border-bottom-right-radius: 1.5rem; /* 24px curve */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 1rem; /* 16px left/right */
+    }
+    .card-heading {
+      color: #ffffff;
+      font-size: 1.25rem; /* 20px */
+      font-weight: 600;   /* semibold */
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    /* -------- Overlapping White Circle (Icon) -------- */
+    .card-icon-wrapper {
+      position: absolute;
+      left: 50%;
+      bottom: -2rem; /* pull down by 32px */
+      transform: translateX(-50%);
+      width: 4rem;  /* 64px */
+      height: 4rem; /* 64px */
+      background-color: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-icon {
+      width: 2rem;  /* 32px */
+      height: 2rem; /* 32px */
+    }
+
+    /* -------- Card Body (Description) -------- */
+    .card-body {
+      padding-top: 2.5rem;   /* 40px to clear the icon */
+      padding-bottom: 1.5rem;/* 24px bottom */
+      padding-left: 1.5rem;  /* 24px left */
+      padding-right: 1.5rem; /* 24px right */
+      text-align: center;
+    }
+    .card-text {
+      color: #4b5563; /* gray‐600 */
+      font-size: 1rem; /* 16px */
+      line-height: 1.6;
+    }
+
+    /* -------- Hover Lift (Optional) -------- */
+    .card:hover {
+      transform: translateY(-4px);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .card-body i {
+  font-size: 2rem;     /* make it visible */
+  color: #1e3a8a;       /* optional: theme color */
+  margin-top: 1rem;     /* spacing from text */
+  display: block;       /* put icon on new line */
+  text-align: center;
+}
+
+    .section-title {
+  margin-bottom: 1.5rem; /* Adjust this as needed */
+}
+
+
+  </style>
+  <!-- ========== End Inline CSS ========== -->
+   <!-- Font Awesome CDN -->
+
+</head>
+
+<body>
+  <section class="cards-section">
+    <div class="cards-container">
+      <h2 class="cards-title">What Sets Us Apart</h2>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-gradient">
+            <h3 class="card-heading">Business Forecast</h3>
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+             Accurate predictions to guide informed business and project decisions. 
+            </p>
+            <i class="fa-solid fa-business-time"></i>
+          </div>
+        </div>
+        <!-- Card 1 -->
+        <div class="card">
+          <div class="card-gradient">
+            <h3 class="card-heading">Turnkey Project Consulting Services</h3>
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              Comprehensive end-to-end solutions tailored to your project lifecycle.
+            </p>
+            <i class="fa-solid fa-key"></i>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="card-gradient">
+            <h3 class="card-heading">Efficient & Timely Execution</h3>
+          </div>
+          
+          <div class="card-body">
+            <p class="card-text">
+              Delivering high-quality outcomes within optimal timeframes.
+            </p>
+            <i class="fas fa-calendar"></i>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+          <div class="card-gradient">
+            <h3 class="card-heading">Focus on Excellence in both Resources & Results</h3>
+          </div>
+          
+          <div class="card-body">
+            <p class="card-text">
+              Prioritizing top-tier talent and exceptional project deliverables.
+            </p>
+            <i class="fa-solid fa-users-viewfinder"></i>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+          <div class="card-gradient">
+            <h3 class="card-heading">Infusion of Technological Progress</h3>
+          </div>
+          
+          <div class="card-body">
+            <p class="card-text">
+              Harnessing advanced technology to enhance project outcomes.
+            </p>
+            <i class="fa-solid fa-cloud"></i>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+          <div class="card-gradient">
+            <h3 class="card-heading">Proactive and Detail-oriented</h3>
+          </div>
+          
+          <div class="card-body">
+            <p class="card-text">
+              Anticipating challenges with precision and thorough planning.
+            </p>
+            <i class="fa-solid fa-circle-info"></i>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+          <div class="card-gradient">
+            <h3 class="card-heading">Observant and Well-versed</h3>
+          </div>
+          
+          <div class="card-body">
+            <p class="card-text">
+              Skilled professionals with sharp insight and deep industry knowledge.
+            </p>
+            <i class="fa-solid fa-circle-info"></i>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-gradient">
+            <h3 class="card-heading">Clear and Detailed awareness of Process Interactions</h3>
+          </div>
+          
+          <div class="card-body">
+            <p class="card-text">
+              Full understanding of interconnected project components and workflows.
+            </p>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-gradient">
+            <h3 class="card-heading">Accomplished Professionals</h3>
+          </div>
+          
+          <div class="card-body">
+            <p class="card-text">
+              Experienced experts committed to delivering superior performance.
+            </p>
+            <i class="fas fa-user-tie"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<h2 class="text-3xl font-bold text-center text-blue-900 mb-12">Our Services</h2>
+  <section class="service-section reverse">
+    <div class="text">
+      <h5>Business Financials</h5>
+      <h2>Have a Glimpse of Your Returns before Investing</h2>
+      <ul>
+        <li><b>ROI Forecasting</b></li>
+      Strategic financial planning process that estimates the potential returns on your investment on the project. We predict future financial outcomes based on various assumptions and variables, helping you to make informed decisions about where to allocate resources.</p>
+    </div>
+    <div class="image">
+      <img src="assets/image.png" alt="Financial Oversight" />
+    </div>
+  </section>
+  
+  <section class="service-section">
+    <div class="text">
+      <h5>PROJECT CONSULTING SERVICES</h5>
+      <h2>Shaping visionary strategies and realizing success</h2>
+      
+      <ul>
+        <li><b>Reliable cost assessment and forecasting</b></li>
+      We prioritize meticulous financial management and provide precise cost estimates, ensuring that we stay on track to achieve your project objectives efficiently.</p>
+        <li>Implement sophisticated models to estimate costs precisely and distribute resources effectively.</li>
+        <li>Maintain precise financial oversight and strategic budget management across all project phases.</li>
+        <li>Facilitate ongoing budget evaluations to sustain financial accuracy and project alignment.</li>
+      </ul>
+    </div>
+    <div class="image">
+      <img src="assets/img1.png" alt="Project Consulting" />
+    </div>
+  </section>
+
+  <section class="service-section reverse">
+    <div class="text">
+      <h5>FINANCIAL OVERSIGHT</h5>
+      <h2>Making sure your budget remains safe and sound</h2>
+      <p>We manage project finances with precision, ensuring cost efficiency and keeping the budget on track.</p>
+      <ul>
+        <li>Deploy intelligent cost-analysis systems to track expenditures and uncover potential efficiencies.</li>
+        <li>Hold periodic financial performance reviews to evaluate project costs and guide strategic decision-making.</li>
+        <li>Maintain clear cost oversight protocols and verification checklists to ensure responsibility and openness.</li>
+      </ul>
+    </div>
+    <div class="image">
+      <img src="assets/img2.png" alt="Financial Oversight" />
+    </div>
+  </section>
+
+  <section class="service-section">
+    <div class="text">
+      <h5>EXECUTION</h5>
+      <h2>Execution is our ultimate priority</h2>
+      <p>We don’t just make promises—we deliver. Execution is the difference between potential and achievement.</p>
+      <ul>
+        <li>Oversee the entire construction lifecycle, from planning to project delivery.</li>
+        <li>Implement innovative project management approaches to enhance efficiency and safeguard against risks.</li>
+        <li>Regularly examine the site to track construction progress, verify quality, and uphold safety standards.</li>
+      </ul>
+    </div>
+    <div class="image">
+      <img src="assets/img3.png" alt="Execution" />
+    </div>
+  </section>
+
+  <section class="service-section reverse">
+    <div class="text">
+      <h5>PROJECT HANDOVER</h5>
+      <h2>Efficient Handover, Thorough Documentation</h2>
+      <p>We ensure a seamless transition by completing all necessary paperwork and prioritizing strong relationships.</p>
+      <ul>
+        <li>Thoroughly recorded project completion for streamlined continuity.</li>
+        <li>Ensuring all reports and paperwork are completed for project conclusion.</li>
+        <li>Detailed evaluation and verification of deliverables for optimal client experience.</li>
+      </ul>
+    </div>
+    <div class="image">
+      <img src="assets/img4.png" alt="Project Handover" />
+    </div>
+  </section>
+
+</main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Nishi Services. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
