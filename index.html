@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nishi Services | Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .hero-overlay h1 {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    .hero-overlay p {
+      font-size: 1.35rem;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    .logo {
+      width: 180px;
+      height: auto;
+    }
+
+    .hero-overlay .sub-caption {
+      font-size: 1rem;
+      font-weight: 300;
+      color: black;
+      margin-top: 0.5rem;
+      display: block;
+    }
+
+    .hero {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: black;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      text-align: center;
+      z-index: 2;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <aside class="sidebar">
+      <img src="assets/logo.png" alt="Nishi Services Logo" class="logo" />
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="about-proprietor.html">Our Leadership</a>
+        <a href="our-services.html">Our Services</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </aside>
+
+    <main class="hero">
+      <div class="slideshow">
+        <div class="slide fade active" style="background-image: url('assets/ns.jpg');"></div>
+        <div class="slide fade" style="background-image: url('assets/ROI.jpg');"></div>
+        <div class="slide fade" style="background-image: url('assets/slide1.jpg');"></div>
+        <div class="slide fade" style="background-image: url('assets/slide2.jpg');"></div>
+        <div class="slide fade" style="background-image: url('assets/slide3.jpg');"></div>
+        <div class="slide fade" style="background-image: url('assets/slide4.jpg');"></div>
+      </div>
+
+      <div class="hero-overlay">
+        <h1></h1>
+        <p></p>
+        <small class="sub-caption"></small>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+    const overlay = document.querySelector(".hero-overlay");
+    const heading = overlay.querySelector("h1");
+    const paragraph = overlay.querySelector("p");
+    const subCaption = overlay.querySelector(".sub-caption");
+
+    const headings = [        
+      "",
+      "",                                  // slide 1 (ROI.jpg)
+      "Turnkey Executions",                // slide 2
+      "From Excavation till Hotel Launch", // slide 3
+      "Civil, MEP, Interior Designs",      // slide 4
+      ""                                   // slide 6 (slide4.jpg)
+    ];
+
+    const paragraphs = [
+      "We bring your vision to life", // slide 0
+      "",                              // slide 1
+      "",                              // slide 2
+      "",                              // slide 3
+      "",                              // slide 4
+      "",                              // slide 5
+      ""                               // slide 6
+    ];
+
+    const subCaptions = [
+      "",  // slide 0
+      "",  // slide 1
+      "Crafting Memorable<br/> Hospitality Experiences", // slide 2
+      "Crafting Memorable<br/> Hospitality Experiences", // slide 3
+      "Crafting Memorable<br/> Hospitality Experiences", // slide 4
+      "Crafting Memorable<br/> Hospitality Experiences", // slide 5
+      ""   // slide 6
+    ];
+
+    function showSlides() {
+      slides.forEach(s => s.classList.remove("active"));
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add("active");
+
+      const title = headings[slideIndex];
+      if (title) {
+        overlay.style.display = "block";
+        heading.innerHTML = title;
+        paragraph.innerHTML = paragraphs[slideIndex];
+        subCaption.innerHTML = subCaptions[slideIndex];
+      } else {
+        overlay.style.display = "none";
+      }
+
+      setTimeout(showSlides, 4000);
+    }
+
+    // hide overlay initially if first slide has no text
+    if (!headings[0]) {
+      overlay.style.display = "none";
+    }
+    setTimeout(showSlides, 4000);
+  </script>
+
+</body>
+
+</html>
